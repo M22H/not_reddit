@@ -1,27 +1,84 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Page Posts 123</h1>
+  <header nav class="navbar">
 
-<table>
-  <thead>
-    <tr>
-      <th>Mitchell Subreddit - Make a Post!</th>
-      <th colspan="6"></th>
-    </tr>
-  </thead>
+      <ul>
+      <li><a href="index.html"><a class="logo"></a><%= image_tag("redditlogo.png", {:style => "width:100px;"}) %></a></li>               
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Remove', post, method: :delete, data: { confirm: 'DELETE DELETE DELETE' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <li><a href="#">
+      <form><input type="search" name="x" placeholder="Search Reddit"></form></a></li>
+      <li><a href="#">Login</a></li>
 
-<br>
+      <%= link_to 'Sign up', new_model_registration_path  %>
+  
+    </ul>
+    </header>
+    
+    <main class="main-content">
+  
+            <div class="post-content">
+              <section class="post">
+                <div class="post_extra">
+                <p>Post info </p><br>
+                <p><a href="#">Edit Post</a></p>
+                 <p><a href="#">Comment
+<%= @post.comments.count %>
+<%= render 'comments/form' %>
 
-<%= link_to 'New Post', new_post_path %>
+                 </a></p>
+                </div>
+            
+                <div class="main_post">
+                  <h2 class="main_post_class"></h2>
+                  <h2>Title of post</h2>
+                  <p class="post_preview">
+                    
+                    <% @posts.each do %>
+                      <% end %>
+
+
+                   <%= image_tag("Buscemi.png", {:style => "width:100px;"}) %>
+                </div>
+              </section>
+              </div>
+
+              <div class="post-content">
+                <section class="post">  
+                  <div class="main_post">
+                    <h2 class="main_post_class"></h2>
+                    <h2>Title of post</h2>
+                    <p class="post_preview">
+                      Vice yuccie freegan mustache, yr portland 
+
+                      <% @posts.each do %>
+                      <% end %>
+                    </p>
+                       <%= image_tag("Buscemi.png", {:style => "width:100px;"}) %>
+                <br><div class="post_extras">
+                <p>Post info </p>
+                <p>| Edit post</p>
+                </div>
+                  </div>
+                </section>
+                </div>
+
+
+                <div class="post-content">
+                  <section class="post">  
+                    <div class="main_post">
+                      <h2 class="main_post_class"></h2>
+                      <h2>Title of post</h2>
+                      <p class="post_preview">
+                      Cronut freegan sriracha mlkshk retro 3 wolf moon poutine lo-fi gastropub taxidermy twee migas edison bulb sustainable. Lumbersexual etsy skateboard paleo raclette celiac small batch ethical flannel butcher affogato poutine tumblr. Edison bulb twee tumblr, beard blue bottle health goth kombucha fingerstache sartorial ramps four dollar toast. Cred fam trust fund echo park, farm-to-table kogi schlitz brunch narwhal. Fanny pack yuccie deep v raw denim. Before they sold out air plant VHS kickstarter trust fund microdosing, quinoa sriracha prism tbh forage austin pork belly locavore everyday carry. Waistcoat tofu leggings cornhole fixie.
+                      </p>
+                         <%= image_tag("Buscemi.png", {:style => "width:100px;"}) %>
+                  <br><div class="post_extras">
+                  <p>Post info </p>
+                  <p>| Edit post</p>
+                  </div>
+                    </div>
+                  </section>
+                  </div>
+                
+                    </div>
+                  </section>
+                  </div>
